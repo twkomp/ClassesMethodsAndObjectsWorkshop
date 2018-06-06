@@ -1,32 +1,43 @@
 package com.company;
 
-public class Cat extends Pet {
-    public Cat(String ownerName, char gender, String petname, int age, String homeAdress, double weight, boolean fur) {
-        super(ownerName, gender, petname, age, homeAdress);
-        this.weight = weight;
-        this.fur = fur;
-    }
+public class Dog extends Pet {
 
-    //char gender;
     int age;
-//    String name;
+    //char gender;
+    //String name;
     boolean whiskers;
     boolean fur;
     int legs;
     double weight;
     String furColor;
 
-//    public Cat(String ownerName, char gender, String petname, int age, String homeAdress) {
+    public Dog(String ownerName, char gender, String petname, int age, String homeAdress, double weight, boolean fur) {
+        super(ownerName, gender, petname, age, homeAdress);
+        this.weight = weight;
+        this.fur = fur;
+    }
+
+//    public Dog(String ownerName, char gender, String petname, int age, String homeAdress) {
 //        super(ownerName, gender, petname, age, homeAdress);
+//    }
+
+//    public Dog(String name, int legs, double weight, char gender) {
+//        this.name = name;
+//        this.legs = legs;
+//        this.weight = weight;
 //    }
 
 //    public String getName() {
 //        return name;
 //    }
 
-//    public int getAge() {
-//        return age;
+//    public void setName(String name) {
+//        this.name = name;
 //    }
+
+    public int getAge() {
+        return age;
+    }
 
     public void setAge(int age) {
         this.age = age;
@@ -40,19 +51,8 @@ public class Cat extends Pet {
         this.gender = gender;
     }
 
-//    public Cat(String name, int legs, double weight,char gender) {
-//        this.name = name;
-//        this.legs = legs;
-//        this.weight = weight;
-//        this.gender = gender;
-//        this.age = 0;
-//    }
-
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-
     public boolean isWhiskers() {
+
         return whiskers;
     }
 
