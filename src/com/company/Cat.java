@@ -10,12 +10,16 @@ public class Cat extends Pet {
     //char gender;
     int age;
 //    String name;
+
     boolean whiskers;
     boolean fur;
     int legs;
     double weight;
     String furColor;
-
+    @Override
+    protected String makeSound() {
+        return super.makeSound();
+    }
 //    public Cat(String ownerName, char gender, String petname, int age, String homeAdress) {
 //        super(ownerName, gender, petname, age, homeAdress);
 //    }
@@ -50,8 +54,21 @@ public class Cat extends Pet {
 
 //    public void setName(String name) {
 //        this.name = name;
-//    }
-
+//
+    protected String catYears() {
+        int catYears;
+        switch (super.getAge()) {
+            case (0): catYears = 0;
+            break;
+            case (1): catYears = 19;
+            break;
+            case (2): catYears = 24;
+            break;
+            default: catYears = (super.getAge() - 2) * 4 + 24;
+            break;
+        }
+        return super.getPetname()+" is "+super.getAge()+" human years old and "+catYears+" years old in cat years";
+    }
     public boolean isWhiskers() {
         return whiskers;
     }

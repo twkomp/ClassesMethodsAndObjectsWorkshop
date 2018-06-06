@@ -8,13 +8,18 @@ public class Pet {
         this.age = age;
         this.homeAdress = homeAdress;
     }
-
+    String sound;
     String ownerName;
     char gender;
+    boolean catears;
     String petname;
     int age;
     String homeAdress;
+    protected String makeSound() {
 
+        return this.sound+"!!";
+
+    }
     public String getOwnerName() {
         return ownerName;
     }
@@ -49,6 +54,14 @@ public class Pet {
 
     public String getHomeAdress() {
         return homeAdress;
+    }
+
+    public String getSound() {
+        return sound;
+    }
+
+    public void setSound(String sound) {
+        this.sound = sound;
     }
 
     public void setHomeAdress(String homeAdress) {
